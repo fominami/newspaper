@@ -38,11 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
+    'crispy_bootstrap4',
     'users',
+    'pages',
+    'articles',
 ]
 AUTH_USER_MODEL='users.CustomUser'
 
-LOGIN_REGIRECT_URL='home'
+LOGIN_REDIRECT_URL='home'
 LOGOUT_REDIRECT_URL='home'
 
 MIDDLEWARE = [
@@ -128,4 +132,8 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+   
+EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
 
+TIME_ZONE='Europe/Istanbul'
